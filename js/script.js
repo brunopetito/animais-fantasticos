@@ -1,6 +1,6 @@
 import ScrollSmooth from './modules/scroll-smooth.js'
 import initAnimationScroll from './modules/animation-scroll.js'
-import initAccordion from './modules/arccodion.js'
+import Accordion from './modules/arccodion.js'
 import initTabNav from './modules/tab-nav.js'
 import initModal from './modules/modal.js'
 import initTooltip from './modules/tooltip.js'
@@ -13,8 +13,11 @@ import initFetchBtc from './modules/fetch-btc.js'
 const scrollSmooth = new ScrollSmooth('[data-menu="suave"] a[href^="#"]')
 scrollSmooth.init()
 
+const accordion = new Accordion('[data-anime ="accordion"] dt')
+accordion.init()
+
 initAnimationScroll()
-initAccordion()
+
 initTabNav()
 initModal()
 initTooltip()
