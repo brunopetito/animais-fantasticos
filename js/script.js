@@ -1,4 +1,4 @@
-import initScrollSmooth from './modules/scroll-smooth.js'
+import ScrollSmooth from './modules/scroll-smooth.js'
 import initAnimationScroll from './modules/animation-scroll.js'
 import initAccordion from './modules/arccodion.js'
 import initTabNav from './modules/tab-nav.js'
@@ -10,7 +10,9 @@ import initFuncionamento from './modules/funcionamento.js'
 import initFecthAnimais from './modules/fetch-animais.js'
 import initFetchBtc from './modules/fetch-btc.js'
 
-initScrollSmooth()
+const scrollSmooth = new ScrollSmooth('[data-menu="suave"] a[href^="#"]')
+scrollSmooth.init()
+
 initAnimationScroll()
 initAccordion()
 initTabNav()
@@ -21,6 +23,3 @@ initMenuMobile()
 initFuncionamento()
 initFecthAnimais()
 initFetchBtc()
-
-import $ from 'jquery'
-import _ from 'lodash'
