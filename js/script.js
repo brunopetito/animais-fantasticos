@@ -7,7 +7,7 @@ import Tooltip from './modules/tooltip.js'
 import initDropdownMenu from './modules/dropdown-menu.js'
 import initMenuMobile from './modules/menu-mobile.js'
 import initFuncionamento from './modules/funcionamento.js'
-import initFecthAnimais from './modules/fetch-animais.js'
+import fetchAnimais from './modules/fetch-animais.js'
 import initFetchBtc from './modules/fetch-btc.js'
 
 const scrollSmooth = new ScrollSmooth('[data-menu="suave"] a[href^="#"]')
@@ -37,5 +37,5 @@ initAnimationScroll()
 initDropdownMenu()
 initMenuMobile()
 initFuncionamento()
-initFecthAnimais()
+fetchAnimais('../../animaisApi.json', '.numeros-grid')
 initFetchBtc()
