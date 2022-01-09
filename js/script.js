@@ -1,5 +1,5 @@
 import ScrollSmooth from './modules/scroll-smooth.js'
-import initAnimationScroll from './modules/animation-scroll.js'
+import ScrollAnima from './modules/ScrollAnima.js'
 import Accordion from './modules/arccodion.js'
 import TabNav from './modules/tab-nav.js'
 import Modal from './modules/modal.js'
@@ -10,7 +10,6 @@ import initFuncionamento from './modules/funcionamento.js'
 import fetchAnimais from './modules/fetch-animais.js'
 
 import fetchBtc from './modules/fetch-btc.js'
-
 
 const scrollSmooth = new ScrollSmooth('[data-menu="suave"] a[href^="#"]')
 scrollSmooth.init()
@@ -34,13 +33,12 @@ modal.init()
 const tooltip = new Tooltip('[data-tooltip]')
 tooltip.init()
 
-initAnimationScroll()
+const scrollAnima = new ScrollAnima('[data-anime ="scroll"]')
+scrollAnima.init()
 
 initDropdownMenu()
 initMenuMobile()
 initFuncionamento()
 
-
 fetchAnimais('../../animaisapi.json', '.numeros-grid')
 fetchBtc('https://blockchain.info/ticker', '.btc-preco')
-
