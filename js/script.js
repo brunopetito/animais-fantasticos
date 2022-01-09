@@ -8,7 +8,9 @@ import initDropdownMenu from './modules/dropdown-menu.js'
 import initMenuMobile from './modules/menu-mobile.js'
 import initFuncionamento from './modules/funcionamento.js'
 import fetchAnimais from './modules/fetch-animais.js'
-import initFetchBtc from './modules/fetch-btc.js'
+
+import fetchBtc from './modules/fetch-btc.js'
+
 
 const scrollSmooth = new ScrollSmooth('[data-menu="suave"] a[href^="#"]')
 scrollSmooth.init()
@@ -37,5 +39,8 @@ initAnimationScroll()
 initDropdownMenu()
 initMenuMobile()
 initFuncionamento()
-fetchAnimais('../../animaisApi.json', '.numeros-grid')
-initFetchBtc()
+
+
+fetchAnimais('../../animaisapi.json', '.numeros-grid')
+fetchBtc('https://blockchain.info/ticker', '.btc-preco')
+
