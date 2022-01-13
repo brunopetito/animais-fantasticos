@@ -5,7 +5,6 @@
 [data-dropdown] .dropdown-menu {
   display: none;
 }
-
 [data-dropdown]:hover .dropdown-menu,
 [data-dropdown].ativo .dropdown-menu {
   display: block;
@@ -30,6 +29,7 @@
   border: 2px solid #333;
   z-index: 200;
 }
+
 .dropdown-menu::before {
   content: '';
   display: block;
@@ -46,4 +46,11 @@
 
 .dropdown-menu li a:hover {
   color: white;
+}
+
+@media (max-width: 700px) {
+  [data-dropdown] .dropdown-menu {
+    display: block;
+    animation: show-up 0.3s forwards;
+  }
 }
